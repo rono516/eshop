@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->bigInteger('cate_id');
             $table->string('name');
-            $table->mediumText('small_description');
+            $table->mediumText('small_description')->nullable();
             $table->longText('description');
             //description
             $table->string('original_price');
@@ -27,9 +27,9 @@ class CreateProductsTable extends Migration
             $table->string('tax');
             $table->tinyInteger('status');
             $table->tinyInteger('trending');
-            $table->mediumText('meta_title');
-            $table->mediumText('meta_keywords');
-            $table->mediumText('meta_description');
+            $table->mediumText('meta_title')->nullable();
+            $table->mediumText('meta_keywords')->nullable();
+            $table->mediumText('meta_description')->nullable();
             $table->timestamps();
         });
     }

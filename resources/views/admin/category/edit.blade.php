@@ -30,7 +30,7 @@
                         <label for="">Popular</label>
                         <input type="checkbox" {{ $category->popular== "1"? 'checked':'' }} name="popular">
                     </div>
-                    <div class="col-md-6 mb-3">
+                    {{-- <div class="col-md-6 mb-3">
                         <label for="">Meta title</label>
                         <input type="text" class="form-control" value="{{ $category->meta_title }}" name="meta_title">
                     </div>
@@ -41,7 +41,7 @@
                     <div class="col-md-6 mb-3">
                         <label for="">Meta Decription</label>
                         <textarea  name="meta_description" rows="3" class="form-control"> {{ $category->meta_decrip}} </textarea>
-                    </div>
+                    </div> --}}
 
                     @if(  $category->image )
                        <img src="{{ asset('assets/uploads/category/'.$category->image)}}" alt="Category image">

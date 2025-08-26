@@ -35,9 +35,9 @@ class CategoryController extends Controller
         //decription
         $category->status = $request->input('status')== TRUE?'1':'0' ;
         $category->popular = $request->input('popular')== TRUE?'1':'0' ;
-        $category->meta_title = $request->input('meta_title');
-        $category->meta_keywords = $request->input('meta_keywords');
-        $category->meta_decrip = $request->input('meta_description');
+        // $category->meta_title = $request->input('meta_title');
+        // $category->meta_keywords = $request->input('meta_keywords');
+        // $category->meta_decrip = $request->input('meta_description');
 
         $category->save();
        return redirect()->route('admin.categories')->with('status',"Category Added Successfully");

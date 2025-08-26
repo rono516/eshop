@@ -21,9 +21,9 @@ class CreateCategoriesTable extends Migration
             $table->tinyInteger('status')-> default('0');
             $table->tinyInteger('popular')-> default('0');
             $table->string('image');
-            $table->string('meta_title');
-            $table->string('meta_decrip');
-            $table->string('meta_keywords');
+            $table->string('meta_title')->nullable();
+            $table->string('meta_decrip')->nullable();
+            $table->string('meta_keywords')->nullable();
             $table->timestamps();
         });
     }

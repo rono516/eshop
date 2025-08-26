@@ -28,18 +28,18 @@
                         <label for="">Popular</label>
                         <input type="checkbox" name="popular">
                     </div>
-                    <div class="col-md-6 mb-3">
+                    {{-- <div class="col-md-6 mb-3">
                         <label for="">Meta title</label>
                         <input type="text" class="form-control" name="meta_title">
-                    </div>
-                    <div class="col-md-6 mb-3">
+                    </div> --}}
+                    {{-- <div class="col-md-6 mb-3">
                         <label for="">Meta Keywords</label>
                         <textarea name="meta_keywords" rows="3" class="form-control" ></textarea>
-                    </div>
-                    <div class="col-md-6 mb-3">
+                    </div> --}}
+                    {{-- <div class="col-md-6 mb-3">
                         <label for="">Meta Decription</label>
                         <textarea  name="meta_description" rows="3" class="form-control"></textarea>
-                    </div>
+                    </div> --}}
                     <div class="col-mid-12">
                         <input type="file" name="image" class="form-control">
                     </div>

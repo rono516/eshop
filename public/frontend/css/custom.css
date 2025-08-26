@@ -14,8 +14,11 @@
     font-weight: 400;
 }
 .product-card{
-    box-shadow: 1px 11px 11px gray;
+    /* border: 1px solid gray; */
+    box-shadow: 1px 6px 6px gray;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .product-card:hover{
-    box-shadow: 1px 11px 11px black;
+    box-shadow: 1px 11px 11px gray;
+    transform: translateY(-3px);
 }
