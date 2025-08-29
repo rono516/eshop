@@ -41,6 +41,14 @@ Route::get('cart', [CartController::class, 'viewcart'])->name('cart');
 
 Route::get('checkout',[CheckoutController::class, 'index']);
 
+Route::get('/cart/count', function () {
+    $cartCount = 0;
+    if (Auth::check()) {
+        $cartCount = \App\Models\Cart::where('user_id', Auth::id())->sum('prod_qty');
+    }
+    return response()->json(['count' => $cartCount]);
+})->name('cart.count');
+
 
 
 Route::middleware(['auth'])->group(function () {

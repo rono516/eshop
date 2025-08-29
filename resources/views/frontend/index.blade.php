@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-     <div class="py-3 shadow bg-warning border-top">
+     {{-- <div class="py-3 shadow bg-warning border-top">
          <div class="container">
              <h5 class="mb-0">
                  <a href="{{ url('category') }}">Collections</a>
@@ -16,7 +16,7 @@
                
              </h5>
          </div>
-     </div>
+     </div> --}}
     @include('layouts.inc.slider')
 
     <div class="py-5">

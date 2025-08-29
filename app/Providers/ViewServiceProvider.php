@@ -3,32 +3,15 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use App\Models\Cart;
 use Illuminate\Support\Facades\Auth;
 
-class AppServiceProvider extends ServiceProvider
+class ViewServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
-
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot()
     {
-        Schema::defaultStringLength(191);
-
+        // Share cart count with the frontnavbar view
         View::composer('layouts.inc.frontnavbar', function ($view) {
             $cartCount = 0;
             if (Auth::check()) {
@@ -36,5 +19,10 @@ class AppServiceProvider extends ServiceProvider
             }
             $view->with('cartCount', $cartCount);
         });
+    }
+
+    public function register()
+    {
+        //
     }
 }

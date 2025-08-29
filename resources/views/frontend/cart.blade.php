@@ -6,7 +6,7 @@
 
 @section('content') 
 
-<div class="py-5 mb-4 shadow bg-warning border-top">
+<div class="py-3 mb-4 shadow bg-warning border-top">
     <div class="container">
         <h5 class="mb-0">
             <a href="{{ url('/') }}">Home Page</a>

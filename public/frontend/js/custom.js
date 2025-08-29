@@ -28,17 +28,29 @@ $('.addToCartBtn').click(function (e) {
             //     button: "OK",
             //     timer: 2000,  // auto close after 2s
             // });
-            Swal.fire({
-                title: "Success",
-                text: response.status,
-                icon: "success",
-                confirmButtonText: "View Cart"
-                
-            }).then((result) => {
-                if(result.isConfirmed){
-                    window.location.href = "/cart";
-                }
-            });
+
+            fetch('/cart/count')
+            // fetch('{{ route("cart.count") }}')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('cart-count').textContent = data.count;
+                    console.log(`data from cart count ${data.count}`);
+                }).then(
+                    Swal.fire({
+                        title: "Success",
+                        text: response.status,
+                        icon: "success",
+                        confirmButtonText: "View Cart"
+
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = "/cart";
+                        }
+                    })
+
+
+                );
+
         },
         error: function (response) {
             swal({

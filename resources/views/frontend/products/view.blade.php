@@ -4,7 +4,7 @@
 
  @section('content')
 
-     <div class="py-5 mb-4 shadow bg-warning border-top">
+     <div class="py-3 mb-4 shadow bg-warning border-top">
          <div class="container">
              <h5 class="mb-0">
                  <a href="{{ url('category') }}">Collections</a>
@@ -24,7 +24,8 @@
              <div class="card-body">
                  <div class="row">
                      <div class="col-md-4 border-right">
-                         <img src="{{ asset('assets/uploads/products/' . $products->image) }}" class="w-100" alt="">
+                         <img src="{{ asset('assets/uploads/products/' . $products->image) }}" class="w-100"
+                             alt="">
                      </div>
                      <div class="col-md-8">
                          <h2 class="mb-2">
@@ -38,7 +39,7 @@
                          <p class="fw-bold">Price: Ksh.{{ $products->selling_price }}</p>
 
                          <p class="mb-3"><s>Ksh.{{ $products->original_price }}</s></p>
-                         <p class="mb-3"> Save: Ksh.{{  $products->original_price - $products->selling_price }} </p>
+                         <p class="mb-3"> Save: Ksh.{{ $products->original_price - $products->selling_price }} </p>
                          <p class="mt-3">
                              {{ $products->meta_description }}
                          </p>
@@ -80,3 +81,9 @@
      </div>
 
  @endsection
+
+ {{-- @push('js')
+     <script>
+         
+     </script>
+ @endpush --}}

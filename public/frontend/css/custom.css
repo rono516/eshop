@@ -21,4 +21,12 @@
 .product-card:hover{
     box-shadow: 1px 11px 11px gray;
     transform: translateY(-3px);
+} 
+
+.cart-badge {
+    font-size: 10px;
+    padding: 2px 5px;
+    line-height: 1;
+    position: relative;
+    top: -8px;  
 }
