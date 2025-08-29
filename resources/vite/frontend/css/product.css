@@ -1,0 +1,89 @@
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.product-inner-box .icons{
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: -3%;
+    size: 23px;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.product-inner-box .icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.product-inner-box .on_sale .badge{
+    background: #000;
+    font-size: 12px;
+    padding: 5px 14px;
+    top: 0px;
+    position: absolute;
+}
+
+.product-inner-box .on_sale .badge:before{
+    border-width: 10px 0px 0px 10px;
+    border-color: transparent transparent transparent #000;
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 0;
+    bottom: 0;
+    border-style: solid;
+}
+
+.product-inner-box .on_sale .badge:after{
+    border-width: 10px 8px 0px 10px;
+    border-color: #000 transparent transparent;
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 0;
+    top: 0;
+    border-style: solid;
+}
+
+.product-inner-box image{
+    /*box-shadow: 0 33px 61px -29px rgb(0 0 0 / 26%);*/
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.product-box.is-hover .icons{
+    transform: rotateY(-3deg);
+    opacity: 0;
+}
+
+.cart-btn{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    opacity: 1;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+}
+
+.product-box.is-hover .cart-btn{
+    opacity: 1;
+}
+
+/*.product-name h3{*/
+/*    font-size: 16px;*/
+/*    font-weight: 400;*/
+/*}*/

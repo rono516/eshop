@@ -22,16 +22,15 @@
 
 
     {{-- <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet"> --}}
-    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/bootstrap5.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet"> --}}
+    {{-- <link href="{{ asset('frontend/css/bootstrap5.css') }}" rel="stylesheet"> --}}
+
+    {{-- @vite(['vite/frontend/css/custom.css', 'vite/frontend/css/bootstrap5.css', 'vite/frontend/css/owl.carousel.min.css', 'vite/frontend/css/owl.theme.default.min.css', 'vite/frontend/js/custom.js', 'vite/frontend/js/owl.carousel.min.js', 'vite/frontend/js/bootstrap.bundle.min.js', 'vite/frontend/js/jquery-3.6.0.min.js']) --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 
-
-
-
-
-    <link href="{{ asset('frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('frontend/css/owl.carousel.min.css') }}" rel="stylesheet"> --}}
+    {{-- <link href="{{ asset('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet"> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
 
@@ -58,9 +57,9 @@
         @yield('content')
     </div>
 
-    <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
+    {{-- <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script> --}}
 
     {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -76,7 +75,7 @@
             });
         </script> --}}
     {{-- @endif --}}
-    <script src="{{ asset('frontend/js/custom.js') }}"></script>
+    {{-- <script src="{{ asset('frontend/js/custom.js') }}"></script> --}}
 
     @yield('scripts')
 
