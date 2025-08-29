@@ -6,8 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
-use App\Models\Category;
-use Illuminate\Http\Request;
+use App\Models\Category; 
 use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
@@ -15,7 +14,7 @@ class FrontendController extends Controller
     public function index()
     {
         $featured_products= Product::where('status', true)->take(15)->get();
-        $trending_category = Category::where('popular', true)->take(15)->get();
+        $trending_category = Category::where('status', true)->take(15)->get();
         return view('frontend.index', compact('featured_products', 'trending_category' ));
 
     }

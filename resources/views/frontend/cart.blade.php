@@ -6,12 +6,12 @@
 
 @section('content') 
 
-<div class="py-3 mb-4 shadow bg-warning border-top">
+<div style="background-color: #2e82a690" class="py-3 mb-4 shadow border-top text-dark">
     <div class="container">
         <h5 class="mb-0">
-            <a href="{{ url('/') }}">Home Page</a>
+            <a class="text-dark" href="{{ url('/') }}">Home Page</a>
             /
-            <a href="{{ url('cart') }}">
+            <a class="text-dark" href="{{ url('cart') }}">
                 Cart
             </a>
         </h5>

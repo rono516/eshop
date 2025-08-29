@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="py-3 mb-4 shadow bg-warning border-top">
+    <div style="background-color: #2e82a690" class="py-3 mb-4 shadow  border-top">
         <div class="container">
             <h5 class="mb-0"><a href="{{ route('categories') }}">{{ $category->name }}</a></h5>
         </div>
@@ -31,7 +31,7 @@
                         </div>
                       </a> --}}
                             <a href="{{ url('view-product', $prod->id) }}">
-                                <div class="rounded-1 product-card  pb-2">
+                                <div class=" product-card  pb-2">
                                     <img src="{{ asset('assets/uploads/products/' . $prod->image) }}"
                                         class="img-fluid w-100 pt-2" style="object-fit: cover;height:200px"
                                         alt="{{ $prod->name }}">

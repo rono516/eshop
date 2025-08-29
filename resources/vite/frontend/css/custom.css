@@ -17,7 +17,9 @@
     /* border: 1px solid gray; */
     box-shadow: 1px 6px 6px gray;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    border-radius: 54px;
+    border-radius: 8px;
+    overflow: hidden;
+    /* background-color: #2e82a690; */
 }
 .product-card:hover{
     box-shadow: 1px 11px 11px gray;

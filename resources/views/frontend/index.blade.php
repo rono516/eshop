@@ -27,15 +27,15 @@
                     @foreach ($featured_products as $prod)
                         <div class="col-6 col-md-4 col-lg-3 ">
                             <a href="{{ url('view-product', $prod->id) }}">
-                                <div class="rounded-1 product-card  pb-2">
+                                <div class=" product-card ">
                                     <img src="{{ asset('assets/uploads/products/' . $prod->image) }}"
-                                        class="img-fluid w-100 pt-2" style="object-fit: cover;height:200px"
+                                        class="img-fluid w-100" style="object-fit: cover;height:200px"
                                         alt="{{ $prod->name }}">
                                     <div class="ps-2 text-dark">
                                         <h5 style="font-size: 13px;opacity:0.6" class="mb-1 mt-1">
                                             {{ $prod->category->name }}</h5>
                                         <h5 class="mb-1 mt-1">{{ $prod->name }}</h5>
-                                        <div class="d-flex justify-content-between  pe-2">
+                                        <div class="d-flex justify-content-between  pe-2 mb-2">
                                             <div> 
                                                 <span class=" ">Ksh. <strong>{{ $prod->selling_price }}</strong></span>
                                             </div>
