@@ -7,7 +7,7 @@
 @section('content')
     <div class="py-3 mb-4 shadow bg-warning border-top">
         <div class="container">
-            <h5 class="mb-0"><a href="{{ route('categories') }}">Categories/{{ $category->name }}</a></h5>
+            <h5 class="mb-0"><a href="{{ route('categories') }}">{{ $category->name }}</a></h5>
         </div>
     </div>
 
@@ -37,9 +37,15 @@
                                         alt="{{ $prod->name }}">
                                     <div class="ps-2 text-dark">
                                         <h5 class="mb-1 mt-1">{{ $prod->name }}</h5>
-                                        <span class=" ">Ksh.{{ $prod->selling_price }}</span>
-                                        <br>
-                                        <span class=" "> <s>Ksh. {{ $prod->original_price }} </s></span>
+                                        <div class="d-flex justify-content-between  pe-2">
+                                            <div>
+                                                <span class=" ">Ksh. <strong>{{ $prod->selling_price }}</strong></span>
+                                            </div>
+
+                                            <div>
+                                                <span class=" "> <s>Ksh. {{ $prod->original_price }} </s></span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </a>

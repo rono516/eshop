@@ -7,8 +7,7 @@
      <div class="py-3 mb-4 shadow bg-warning border-top">
          <div class="container">
              <h5 class="mb-0">
-                 <a href="{{ url('category') }}">Collections</a>
-                 /
+                  
                  <a href="{{ url('view-category/' . $products->category->slug) }}">
                      {{ $products->category->name }}
                  </a>/

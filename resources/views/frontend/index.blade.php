@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-     {{-- <div class="py-3 shadow bg-warning border-top">
+    {{-- <div class="py-3 shadow bg-warning border-top">
          <div class="container">
              <h5 class="mb-0">
                  <a href="{{ url('category') }}">Collections</a>
@@ -28,13 +28,21 @@
                         <div class="col-6 col-md-4 col-lg-3 ">
                             <a href="{{ url('view-product', $prod->id) }}">
                                 <div class="rounded-1 product-card  pb-2">
-                                    <img src="{{ asset('assets/uploads/products/' . $prod->image) }}" class="img-fluid w-100 pt-2"
-                                        style="object-fit: cover;height:200px" alt="{{ $prod->name }}">
+                                    <img src="{{ asset('assets/uploads/products/' . $prod->image) }}"
+                                        class="img-fluid w-100 pt-2" style="object-fit: cover;height:200px"
+                                        alt="{{ $prod->name }}">
                                     <div class="ps-2 text-dark">
+                                        <h5 style="font-size: 13px;opacity:0.6" class="mb-1 mt-1">
+                                            {{ $prod->category->name }}</h5>
                                         <h5 class="mb-1 mt-1">{{ $prod->name }}</h5>
-                                        <span class=" ">Ksh.{{ $prod->selling_price }}</span>
-                                        <br>
-                                        <span class=" "> <s>Ksh. {{ $prod->original_price }} </s></span>
+                                        <div class="d-flex justify-content-between  pe-2">
+                                            <div> 
+                                                <span class=" ">Ksh. <strong>{{ $prod->selling_price }}</strong></span>
+                                            </div>
+                                            <div>
+                                                <span class=" "> <s>Ksh. {{ $prod->original_price }} </s></span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -168,4 +176,3 @@
         })
     </script>
 @endsection
-
