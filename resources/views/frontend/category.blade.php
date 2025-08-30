@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 style="font-size: 17px">All Categories</h2>
+                    {{-- <h2 style="font-size: 17px">All Categories</h2> --}}
                     <div class="">
                         @foreach ($category as $cate)
                             <div  class="col-md-3 mb-3 text-center product-card">

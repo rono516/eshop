@@ -9,11 +9,11 @@
 <div style="background-color: #2e82a690" class="py-3 mb-4 shadow border-top text-dark">
     <div class="container">
         <h5 class="mb-0">
-            <a class="text-dark" href="{{ url('/') }}">Home Page</a>
-            /
+            <a class="text-dark" href="{{ url('/') }}">Continue Shopping</a>
+            {{-- /
             <a class="text-dark" href="{{ url('cart') }}">
                 Cart
-            </a>
+            </a> --}}
         </h5>
     </div>
 </div>
@@ -74,7 +74,7 @@
                 @else
                   <div class="card-body text-center">
                      <h2>Your <i class="fa fa-shopping-cart"></i> Cart is empty</h2>
-                     <a href="{{ url('category') }}" class="btn btn-outline-primary">Continue Shopping</a>
+                     <a href="{{ route('home') }}" class="btn btn-outline-primary">Continue Shopping</a>
 
                     </div> 
                 @endif         

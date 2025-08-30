@@ -53,9 +53,9 @@
 <body>
     @include('layouts.inc.frontnavbar')
 
-    <div class="content">
+    {{-- <div class="content"> --}}
         @yield('content')
-    </div>
+    {{-- </div> --}}
 
     {{-- <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script> --}}

@@ -28,9 +28,9 @@
                     @foreach ($category as $item)
                         
                        <tr>
-                           <td>{{ $item-> id}}  </td>
-                           <td>{{ $item-> name}}  </td>
-                           <td>{{ $item-> meta_decrip}}  </td>
+                           <td>{{ $item->id}}  </td>
+                           <td>{{ $item->name}}  </td>
+                           <td>{{ $item->decription}}  </td>
                            <td>
                              <img src="{{ asset('assets/uploads/category/'.$item-> image)}}" class="cate-image" alt="image here"> </td>
                            <td>

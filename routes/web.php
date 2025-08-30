@@ -30,6 +30,7 @@ Route::get('view-category/{slug}', [FrontendController::class, 'viewcategory']);
 Route::get('view-category/{cate_slug}/{prod_meta_description}', [FrontendController::class, 'productview']);
 Route::get('view-product/{product_id}', [FrontendController::class, 'productview']);
 // Route::get('login', [LoginController::class, 'login']);
+Route::post('logout', [LoginController::class, 'logout']);
 
 Auth::routes();
 

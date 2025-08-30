@@ -39,7 +39,12 @@
                         </li>
                     @endif
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="nav-link btn btn-link  align-baseline" type="submit">Logout</button>
+                             {{-- <a class="nav-link" type="button">Logout</a> --}}
+                        </form>
+                        
                     </li>
 
 

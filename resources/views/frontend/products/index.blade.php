@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-    <div style="background-color: #2e82a690" class="py-3 mb-4 shadow  border-top">
+    {{-- <div style="background-color: #2e82a690" class="py-3 mb-4 shadow  border-top">
         <div class="container">
             <h5 class="mb-0"><a href="{{ route('categories') }}">{{ $category->name }}</a></h5>
         </div>
-    </div>
+    </div> --}}
 
     <div class="py-5">
         <div class="container">
