@@ -74,8 +74,7 @@ $('.addToCartBtn').click(function (e) {
                 .then(res => res.json())
                 .then(data => {
                     document.getElementById('cart-count').textContent = data.count;
-                    console.log(`data from cart count ${data.count}`);
-
+ 
                     // Call SweetAlert AFTER data is updated
                     Swal.fire({
                         title: "Success",
@@ -103,8 +102,7 @@ $('.addToCartBtn').click(function (e) {
 $(document).ready(function () {
     $('.increment-btn').click(function (e) {
 
-        // console.log(`increase quantity clicked`);
-        e.preventDefault();
+         e.preventDefault();
 
 
         var inc_value = $(this).closest('.product_data').find('.qty-input').val();
