@@ -18,7 +18,7 @@
                             <div class="mt-2">
                                 <h5 class="text-dark">{{ $cate->name }}</h5>
                                 <p class="text-dark">
-                                    {{ $cate->decription }} 
+                                    {{ $cate->decription }}
                                 </p>
                             </div>
                         </a>
