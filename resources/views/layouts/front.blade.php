@@ -75,6 +75,8 @@
     {{-- <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script> --}}
 
     {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
+
+    @include('layouts.inc.frontfooter')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     {{-- @if (session('status')) --}}

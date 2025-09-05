@@ -32,6 +32,7 @@ class CategoryController extends Controller
         $category->name = $request->input('name');
         $category->slug = $request->input('slug');
         $category->decription = $request->input('decription');
+        $category->logo = $request->input('logo');
         //decription
         $category->status = $request->input('status')== TRUE?'1':'0' ;
         $category->popular = $request->input('popular')== TRUE?'1':'0' ;

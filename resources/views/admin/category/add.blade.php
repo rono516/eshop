@@ -20,6 +20,10 @@
                         <label for="decription">Description</label>
                         <textarea name="decription" rows="3" class="form-control"></textarea>
                     </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="logo">Logo link</label>
+                        <input type="text" class="form-control" name="logo">
+                    </div>
                     <div class="col-md-6 mb-3">
                         <label for="">Status</label>
                         <input type="checkbox" name="status">
