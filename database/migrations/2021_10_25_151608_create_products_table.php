@@ -19,7 +19,6 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->mediumText('small_description')->nullable();
             $table->longText('description');
-            //description
             $table->string('original_price');
             $table->string('selling_price');
             $table->string('image');

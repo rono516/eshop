@@ -39,11 +39,20 @@
 
                         @endforeach
 
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Total:</td>
+                            <td>{{$order->orderAmount()}}</td>
+                        </tr>
+
                         </tbody>
                     </table>
                     <hr>
 
                     <p>Number of orders items | {{$oItems->count()}}</p>
+                    <p>Total Price | {{$order->orderAmount()}}</p>
+                    <p>Amount Paid | {{$order->orderAmount()}}</p>
 
 
 

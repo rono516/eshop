@@ -66,9 +66,11 @@
 <body>
     @include('layouts.inc.frontnavbar')
 
-    {{-- <div class="content"> --}}
-    @yield('content')
-    {{-- </div> --}}
+    <div class="min-vh-100">
+        <main class="flex-fill">
+            @yield('content')
+        </main>
+    </div>
 
     {{-- <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script> --}}
