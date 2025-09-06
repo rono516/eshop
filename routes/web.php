@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -77,4 +78,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('edit-product/{id}', [ProductController::class, 'edit'])->name('edit.product');
     Route::put('update-product/{id}', [ProductController::class, 'update'])->name('update.product');
     Route::get('delete-product/{id}', [ProductController::class, 'destroy'])->name('delete.product');
+    Route::get('orders', [DashboardController::class, 'orders'])->name('admin.orders');
+
 });

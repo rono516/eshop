@@ -54,6 +54,9 @@ class CheckoutController extends Controller
                 'qty'      => $item->prod_qty,
                 'price'    => $item->products->selling_price,
             ]);
+            $product = Product::findOrFail($item->prod_id);
+            $product->qty -= $item->prod_qty;
+            $product->save();
         }
 
         Payment::create([
@@ -67,7 +70,6 @@ class CheckoutController extends Controller
 
         return redirect()->route('my.orders');
 
-//            return redirect('/')->with('status', 'Order Placed Successfully');
     }
 
     public function trackingNo()

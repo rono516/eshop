@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row">
                 {{-- <h2>Featured Products</h2> --}}
-                <div class="col">
+                <div class="row">
                     @foreach ($featured_products as $prod)
                         <div class="col-6 col-md-4 col-lg-3 ">
                             <a href="{{ url('view-product', $prod->id) }}">

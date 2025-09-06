@@ -30,6 +30,11 @@
             <p>Products</p>
           </a>
         </li>
+        <li class="nav-item {{ Request::is('products')? 'active':'' }}">
+          <a class="nav-link" href="{{ route('admin.orders') }}">
+            <p>Orders</p>
+          </a>
+        </li>
         {{-- <li class="nav-item {{ Request::is('add-products')? 'active':'' }}">
           <a class="nav-link" href="{{url ('add-products')}}">
             <p>Add Products</p>
