@@ -73,7 +73,14 @@ $('.addToCartBtn').click(function (e) {
             fetch('/cart/count')
                 .then(res => res.json())
                 .then(data => {
-                    document.getElementById('cart-count').textContent = data.count;
+                    // document.getElementById('cart-count').textContent = data.count;
+
+                    const mobileBadge = document.getElementById('cart-count-mobile');
+                    const desktopBadge = document.getElementById('cart-count-desktop');
+
+                    if (mobileBadge) mobileBadge.textContent = data?.count;
+                    if (desktopBadge) desktopBadge.textContent = data?.count;
+                    // console.log(`data from cart count ${data.count}`);
  
                     // Call SweetAlert AFTER data is updated
                     Swal.fire({

@@ -75,7 +75,7 @@
                     </div> --}}
                     @if ($product->image)
                         <p></p> {{-- {{  $product->image }} --}}
-                        <img src="{{ asset('assets/uploads/products/' . $product->image) }}"
+                        <img src="{{ asset('storage/' . $product->image) }}"
                             style="width: 150px;height:100px;margin-bottom:30px" alt="Product image">
                     @endif
                     <div class="col-mid-12">

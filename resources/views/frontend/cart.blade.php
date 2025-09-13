@@ -28,7 +28,7 @@
                     
                     <div class="row product_data">
                         <div class="col-md-2 my-auto">
-                            <img src="{{ asset('assets/uploads/products/'.$item->products->image) }}" height="70px" width="70px" alt="Image here">
+                            <img src="{{ asset('storage/'.$item->products->image) }}" height="70px" width="70px" alt="Image here">
                         </div>
                         <div class="col-md-3 my-auto">
                             <h3>{{ $item->products->name }}</h3>

@@ -16,7 +16,7 @@ class ProductsTable
     {
         return $table
             ->columns([
-                TextColumn::make('cate_id')
+                TextColumn::make('category_id')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('name')

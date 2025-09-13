@@ -23,7 +23,7 @@
                         <div class="card">
                             {{-- <a href="{{ url('view-product/'.$prod->id) }}">
 
-                        <img src="{{ asset('assets/uploads/products/'.$prod->image ) }}" width="250" height="250" alt="Product image">
+                        <img src="{{ asset('storage/'.$prod->image ) }}" width="250" height="250" alt="Product image">
                         <div class="card-body">
                              <h5 >{{ $prod->name }}</h5>
                             <span class="float-start">Ksh. {{ number_format( $prod->selling_price) }}</span>
@@ -32,7 +32,7 @@
                       </a> --}}
                             <a href="{{ url('view-product', $prod->id) }}">
                                 <div class=" product-card  pb-2">
-                                    <img src="{{ asset('assets/uploads/products/' . $prod->image) }}"
+                                    <img src="{{ asset('storage/' . $prod->image) }}"
                                         class="img-fluid w-100 pt-2" style="object-fit: cover;height:200px"
                                         alt="{{ $prod->name }}">
                                     <div class="ps-2 text-dark">

@@ -13,7 +13,7 @@
                     <div class="col-6 col-md-4 col-lg-3 mb-3 text-center product-card">
                         <a href="{{ url('view-category/' . $cate->slug) }}">
 
-                            <img src="{{ asset('assets/uploads/category/' . $cate->image) }}" class="img-fluid w-100"
+                            <img src="{{ asset('storage/' . $cate->image) }}" class="img-fluid w-100"
                                 style="object-fit: cover;height:200px" alt="Category image">
                             <div class="mt-2">
                                 <h5 class="text-dark">{{ $cate->name }}</h5>

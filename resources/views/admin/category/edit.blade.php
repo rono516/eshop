@@ -44,7 +44,7 @@
                     </div> --}}
 
                     @if(  $category->image )
-                       <img src="{{ asset('assets/uploads/category/'.$category->image)}}" alt="Category image">
+                       <img src="{{ asset('storage/'.$category->image)}}" alt="Category image">
                     @endif
                        <div class="col-mid-12">
                         <input type="file" name="image" class="form-control">

@@ -2,7 +2,7 @@
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">Mega E-Shop</a>
         <a class="navbar-brand d-block d-md-none"  href="{{ route('cart') }}">Cart
-            <span id="cart-count" class="badge cart-badge bg-danger ">{{ $cartCount }}</span>
+            <span id="cart-count-mobile" class="badge cart-badge bg-danger ">{{ $cartCount }}</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
                 </li>
                 <li class="nav-item d-none d-md-block">
                     <a class="nav-link " href="{{ route('cart') }}">Cart
-                        <span id="cart-count" class="badge cart-badge bg-danger ">{{ $cartCount }}</span>
+                        <span id="cart-count-desktop" class="badge cart-badge bg-danger ">{{ $cartCount }}</span>
                     </a>
 
                 </li>

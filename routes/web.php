@@ -1,15 +1,16 @@
 <?php
 
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
-use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\Frontend\CartController;
-use App\Http\Controllers\Frontend\CheckoutController;
-use App\Http\Controllers\Frontend\FrontendController;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Frontend\CheckoutController;
+use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,7 @@ Auth::routes();
 Route::get('/cart/count', function () {
     $cartCount = 0;
     if (Auth::check()) {
-        $cartCount = \App\Models\Cart::where('user_id', Auth::id())->sum('prod_qty');
+        $cartCount = Cart::where('user_id', Auth::id())->sum('prod_qty');
     }
     return response()->json(['count' => $cartCount]);
 })->name('cart.count');

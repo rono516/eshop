@@ -13,7 +13,7 @@ class ProductForm
     {
         return $schema
             ->components([
-                TextInput::make('cate_id')
+                TextInput::make('category_id')
                     ->required()
                     ->numeric(),
                 TextInput::make('name')

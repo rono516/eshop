@@ -7,13 +7,13 @@
      <div style="background-color: #2e82a690" class="py-3 mb-4 shadow  border-top ">
          <div class="container">
              <h5 class="mb-0 text-dark">
-                  
+
                  <a class="text-dark" href="{{ url('view-category/' . $products->category->slug) }}">
                      {{ $products->category->name }}
                  </a>/
                  <a class="text-dark" href="{{ url('view-product', $products->id) }}">
                      {{ $products->name }}
-                 </a>
+                 </a> 
              </h5>
          </div>
      </div>
@@ -23,8 +23,7 @@
              <div class="card-body">
                  <div class="row">
                      <div class="col-md-4 border-right">
-                         <img src="{{ asset('assets/uploads/products/' . $products->image) }}" class="w-100"
-                             alt="">
+                         <img src="{{ asset('storage/' . $products->image) }}" class="w-100" alt="">
                      </div>
                      <div class="col-md-8">
                          <h2 class="mb-2">

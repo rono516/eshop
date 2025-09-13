@@ -31,7 +31,7 @@ class ProductController extends Controller
             $file ->move('assets/uploads/products/',$filename);
             $products->image= $filename;
         }
-        $products-> cate_id = $request-> input('cate_id');
+        $products-> category_id = $request-> input('category_id');
         $products-> name = $request-> input('name');
         // $products-> small_description = $request-> input('small_description');
         //small_description

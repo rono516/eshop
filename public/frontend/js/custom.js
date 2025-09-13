@@ -30,26 +30,30 @@ $('.addToCartBtn').click(function (e) {
             // });
 
             fetch('/cart/count')
-            // fetch('{{ route("cart.count") }}')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('cart-count').textContent = data.count;
+                    // document.getElementById('cart-count').textContent = data.count;
+                    // document.getElementById('desktop-cart-count').textContent = data.count;
+                    const mobileBadge = document.getElementById('cart-count-mobile');
+                    const desktopBadge = document.getElementById('cart-count-desktop');
+
+                    if (mobileBadge) mobileBadge.textContent = data?.count;
+                    if (desktopBadge) desktopBadge.textContent = data?.count;
                     console.log(`data from cart count ${data.count}`);
-                }).then(
-                    Swal.fire({
+
+                    return Swal.fire({
                         title: "Success",
                         text: response.status,
                         icon: "success",
-                        confirmButtonText: "View Cart"
+                        confirmButtonText: "View Cart",
+                        timer: 2000,
 
                     }).then((result) => {
                         if (result.isConfirmed) {
                             window.location.href = "/cart";
                         }
                     })
-
-
-                );
+                }).catch(error => console.log('Error fetching cart count:', error));
 
         },
         error: function (response) {

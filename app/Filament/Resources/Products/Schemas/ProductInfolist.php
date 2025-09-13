@@ -12,7 +12,7 @@ class ProductInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('cate_id')
+                TextEntry::make('category_id')
                     ->numeric(),
                 TextEntry::make('name'),
                 TextEntry::make('small_description')

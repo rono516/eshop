@@ -41,7 +41,7 @@
                            
                            <td>{{ $item-> selling_price}}  </td>
                            <td>
-                             <img src="{{ asset('assets/uploads/products/'.$item-> image)}}" class="cate-image" alt="image here"> </td>
+                             <img src="{{ asset('storage/'.$item-> image)}}" class="cate-image" alt="image here"> </td>
                            <td>
                             <a href="{{ route('edit.product',$item->id)}}" class="btn btn-primary btn-sm">Edit</a>
                              <a href="{{ route('delete.product',$item->id) }}"  class="btn btn-danger btn-sm">Delete</a>

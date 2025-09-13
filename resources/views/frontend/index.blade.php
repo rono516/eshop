@@ -28,7 +28,7 @@
                         <div class="col-6 col-md-4 col-lg-3 ">
                             <a href="{{ url('view-product', $prod->id) }}">
                                 <div class=" product-card ">
-                                    <img src="{{ asset('assets/uploads/products/' . $prod->image) }}"
+                                    <img src="{{ asset('storage/' . $prod->image) }}"
                                         class="img-fluid w-100" style="object-fit: cover;height:200px"
                                         alt="{{ $prod->name }}">
                                     <div class="ps-2 text-dark">
