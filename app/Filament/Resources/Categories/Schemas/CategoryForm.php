@@ -29,6 +29,8 @@ class CategoryForm
                     ->numeric()
                     ->default(0),
                 FileUpload::make('image')
+                    ->disk('public') 
+                    ->directory('category')
                     ->image()
                     ->required(),
                 // TextInput::make('meta_title')

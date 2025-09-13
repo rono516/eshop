@@ -20,7 +20,7 @@ class CategoryInfolist
                     ->numeric(),
                 TextEntry::make('popular')
                     ->numeric(),
-                ImageEntry::make('image'),
+                ImageEntry::make('image')->disk('public')->visibility('public'),
                 TextEntry::make('meta_title')
                     ->placeholder('-'),
                 TextEntry::make('meta_decrip')

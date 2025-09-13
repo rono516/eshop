@@ -29,6 +29,8 @@ class ProductForm
                 TextInput::make('selling_price')
                     ->required(),
                 FileUpload::make('image')
+                    ->disk('public')
+                    ->directory('product')
                     ->image()
                     ->required(),
                 TextInput::make('qty')

@@ -25,7 +25,7 @@ class ProductsTable
                     ->searchable(),
                 TextColumn::make('selling_price')
                     ->searchable(),
-                ImageColumn::make('image'),
+                ImageColumn::make('image')->disk('public')->visibility('public'),
                 TextColumn::make('qty')
                     ->searchable(),
                 TextColumn::make('tax')

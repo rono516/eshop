@@ -22,7 +22,7 @@ class ProductInfolist
                     ->columnSpanFull(),
                 TextEntry::make('original_price'),
                 TextEntry::make('selling_price'),
-                ImageEntry::make('image'),
+                ImageEntry::make('image')->disk('public')->visibility('public'),
                 TextEntry::make('qty'),
                 TextEntry::make('tax'),
                 TextEntry::make('status')

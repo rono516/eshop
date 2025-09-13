@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id')->references('id')->on('orders');
+            $table->foreignId('order_id')->constrained()->cascadeOnDelete();
             $table->integer('amount');
             $table->enum('status', ['Unpaid', 'Paid'])->default('Unpaid');
             $table->timestamps();

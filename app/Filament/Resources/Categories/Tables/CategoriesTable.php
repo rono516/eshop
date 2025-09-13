@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Filament\Resources\Categories\Tables;
 
 use Filament\Actions\BulkActionGroup;
@@ -26,7 +25,15 @@ class CategoriesTable
                 TextColumn::make('popular')
                     ->numeric()
                     ->sortable(),
-                ImageColumn::make('image'),
+                // TextColumn::make('image')
+                //     ->numeric()
+                //     ->sortable(),
+                // ImageColumn::make('image')
+                //     ->disk('public')
+                //     ->visibility('public'),
+                ImageColumn::make('image')
+                    ->disk('public')
+                    ->url(fn($record) => asset('storage/' . $record->image)),
                 // TextColumn::make('meta_title')
                 //     ->searchable(),
                 // TextColumn::make('meta_decrip')
@@ -41,7 +48,7 @@ class CategoriesTable
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                    ImageColumn::make('logo'),
+                ImageColumn::make('logo'),
                 // TextColumn::make('logo')
                 //     ->searchable(),
             ])
