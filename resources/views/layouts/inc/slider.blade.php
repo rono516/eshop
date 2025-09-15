@@ -3,7 +3,7 @@
         <div class=" ">
             <div class="container">
                 <div class="row">
-                    <h2 class="text-dark" style="font-size: 16px">Trending Categories</h2>
+                    <h2 class="text-dark" style="font-size: 16px">Product Categories</h2>
 
                     <div class="">
                         @foreach ($trending_category as $tcategory)

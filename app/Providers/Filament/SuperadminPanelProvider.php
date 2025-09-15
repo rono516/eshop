@@ -30,8 +30,9 @@ class SuperadminPanelProvider extends PanelProvider
             ->path('superadmin')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::BlueT,
             ])
+            ->favicon('https://img.icons8.com/?size=100&id=vDn8s8QRGzD4&format=png&color=000000')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([

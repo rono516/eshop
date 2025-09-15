@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Categories\Schemas;
 
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
@@ -20,14 +21,28 @@ class CategoryForm
                 Textarea::make('decription')
                     ->required()
                     ->columnSpanFull(),
-                TextInput::make('status')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
-                TextInput::make('popular')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
+                // TextInput::make('status')
+                //     ->required()
+                //     ->numeric()
+                //     ->default(0),
+                Select::make('status')
+                    ->options([
+                        '1' => 'Active',
+                        '0' => 'Inactive',
+                    ])
+                    ->native(false)
+                    ->required(),
+                // TextInput::make('popular')
+                //     ->required()
+                //     ->numeric()
+                //     ->default(0),
+                Select::make('popular')
+                    ->options([
+                        '1' => 'Popular',
+                        '0' => 'Not Popular',
+                    ])
+                    ->native(false)
+                    ->required(),
                 FileUpload::make('image')
                     ->disk('public') 
                     ->directory('category')

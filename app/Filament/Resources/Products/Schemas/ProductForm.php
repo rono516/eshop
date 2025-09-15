@@ -1,10 +1,10 @@
 <?php
-
 namespace App\Filament\Resources\Products\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
 class ProductForm
@@ -13,9 +13,10 @@ class ProductForm
     {
         return $schema
             ->components([
-                TextInput::make('category_id')
+                Select::make('category_id')
                     ->required()
-                    ->numeric(),
+                    ->relationship('category', 'name')
+                    ->required(),
                 TextInput::make('name')
                     ->required(),
                 // Textarea::make('small_description')
@@ -37,12 +38,20 @@ class ProductForm
                     ->required(),
                 TextInput::make('tax')
                     ->required(),
-                TextInput::make('status')
-                    ->required()
-                    ->numeric(),
-                TextInput::make('trending')
-                    ->required()
-                    ->numeric(),
+                Select::make('status')
+                    ->options([
+                        '1' => 'Active',
+                        '0' => 'Inactive',
+                    ])
+                    ->native(false)
+                    ->required(),
+                Select::make('trending')
+                    ->options([
+                        '1' => 'Trending',
+                        '0' => 'Not Trending',
+                    ])
+                    ->native(false)
+                    ->required(),
                 // Textarea::make('meta_title')
                 //     ->default(null)
                 //     ->columnSpanFull(),
