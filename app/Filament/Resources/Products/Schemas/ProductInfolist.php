@@ -15,9 +15,9 @@ class ProductInfolist
                 TextEntry::make('category_id')
                     ->numeric(),
                 TextEntry::make('name'),
-                TextEntry::make('small_description')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
+                // TextEntry::make('small_description')
+                //     ->placeholder('-')
+                //     ->columnSpanFull(),
                 TextEntry::make('description')
                     ->columnSpanFull(),
                 TextEntry::make('original_price'),
@@ -29,15 +29,15 @@ class ProductInfolist
                     ->numeric(),
                 TextEntry::make('trending')
                     ->numeric(),
-                TextEntry::make('meta_title')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
-                TextEntry::make('meta_keywords')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
-                TextEntry::make('meta_description')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
+                // TextEntry::make('meta_title')
+                //     ->placeholder('-')
+                //     ->columnSpanFull(),
+                // TextEntry::make('meta_keywords')
+                //     ->placeholder('-')
+                //     ->columnSpanFull(),
+                // TextEntry::make('meta_description')
+                //     ->placeholder('-')
+                //     ->columnSpanFull(),
                 TextEntry::make('created_at')
                     ->dateTime()
                     ->placeholder('-'),

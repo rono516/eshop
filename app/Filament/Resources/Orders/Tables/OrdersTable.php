@@ -28,17 +28,17 @@ class OrdersTable
                     ->searchable(),
                 TextColumn::make('address1')
                     ->searchable(),
-                TextColumn::make('address2')
-                    ->searchable(),
+                // TextColumn::make('address2')
+                //     ->searchable(),
                 TextColumn::make('town')
                     ->searchable(),
-                TextColumn::make('county')
-                    ->searchable(),
+                // TextColumn::make('county')
+                //     ->searchable(),
                 TextColumn::make('status')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('message')
-                    ->searchable(),
+                // TextColumn::make('message')
+                //     ->searchable(),
                 TextColumn::make('tracking_no')
                     ->searchable(),
                 TextColumn::make('created_at')
