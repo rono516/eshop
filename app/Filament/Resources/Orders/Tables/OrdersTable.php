@@ -16,27 +16,39 @@ class OrdersTable
         return $table
             ->columns([
                 TextColumn::make('user_id')
+                    ->label('User ID')
                     ->searchable(),
                 TextColumn::make('fname')
-                    ->searchable(),
+                    ->searchable()
+                    ->label("First Name"),
                 TextColumn::make('lname')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Last Name')
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('email')
                     ->label('Email address')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('phone')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Phone'),
                 TextColumn::make('address1')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Address')
+                    ->toggleable(isToggledHiddenByDefault: true),
+
                 // TextColumn::make('address2')
                 //     ->searchable(),
                 TextColumn::make('town')
                     ->searchable(),
                 // TextColumn::make('county')
                 //     ->searchable(),
+                // TextColumn::make('status')
+                //     ->numeric()
+                //     ->sortable(),
                 TextColumn::make('status')
-                    ->numeric()
-                    ->sortable(),
+                            ->label('Status')
+                            ->formatStateUsing(fn(int $state): string => $state ===1 ? 'Delivered': 'Pending delivery'),
                 // TextColumn::make('message')
                 //     ->searchable(),
                 TextColumn::make('tracking_no')
@@ -44,10 +56,12 @@ class OrdersTable
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->label('Ordered')
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->label('Updated')
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([

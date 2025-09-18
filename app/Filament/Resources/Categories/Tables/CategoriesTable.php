@@ -19,12 +19,20 @@ class CategoriesTable
                     ->searchable(),
                 // TextColumn::make('slug')
                 //     ->searchable(),
+                // TextColumn::make('status')
+                //     ->numeric()
+                //     ->sortable(),
+                // TextColumn::make('popular')
+                //     ->numeric()
+                //     ->sortable(),
                 TextColumn::make('status')
-                    ->numeric()
-                    ->sortable(),
+                    ->label('Status')
+                    ->formatStateUsing(fn(int $state): string => $state === 1 ? 'Active' : "Inactive")
+                    ->badge(),
                 TextColumn::make('popular')
-                    ->numeric()
-                    ->sortable(),
+                    ->label('Popularity')
+                    ->formatStateUsing(fn(int $state): string => $state === 1 ? "Popular" : 'Not Popular')
+                    ->badge(),
                 // TextColumn::make('image')
                 //     ->numeric()
                 //     ->sortable(),

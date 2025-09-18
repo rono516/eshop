@@ -13,7 +13,7 @@ class PaymentForm
         return $schema
             ->components([
                 Select::make('order_id')
-                    ->relationship('order', 'id')
+                    ->relationship('order', 'tracking_no')
                     ->required(),
                 TextInput::make('amount')
                     ->required()

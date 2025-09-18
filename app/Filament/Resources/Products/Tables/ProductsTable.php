@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Filament\Resources\Products\Tables;
 
 use Filament\Actions\BulkActionGroup;
@@ -31,11 +30,10 @@ class ProductsTable
                 TextColumn::make('tax')
                     ->searchable(),
                 TextColumn::make('status')
-                    ->numeric()
-                    ->sortable(),
+                    ->formatStateUsing(fn(int $state): string => $state === 1 ? 'Active' : 'Inactive')
+                    ->label('Status')->badge(),
                 TextColumn::make('trending')
-                    ->numeric()
-                    ->sortable(),
+                    ->formatStateUsing(fn(int $state): string => $state === 1 ? "Trending" : "Not Trending"),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
