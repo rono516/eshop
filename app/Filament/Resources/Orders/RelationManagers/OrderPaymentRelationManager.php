@@ -14,7 +14,7 @@ class OrderPaymentRelationManager extends RelationManager
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('amount')->money('kes'),
-                Tables\Columns\TextColumn::make('status')->label('Status'),
+                Tables\Columns\TextColumn::make('status')->label('Status')->badge(),
             ]);
     }
 

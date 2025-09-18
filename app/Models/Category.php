@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,7 +9,7 @@ class Category extends Model
     use HasFactory;
 
     // protected $table = 'categories';
-    protected $fillable= [
+    protected $fillable = [
         'name',
         'slug',
         'decription',
@@ -22,4 +21,15 @@ class Category extends Model
         'meta_keywords',
         "logo",
     ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'category_id', 'id');
+    }
+
+    public function getProductsCountAttribute(): int
+    {
+        return $this->products()->count();
+    }
+
 }
