@@ -7,6 +7,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
 class ProductsTable
@@ -16,7 +17,6 @@ class ProductsTable
         return $table
             ->columns([
                 TextColumn::make('category.name')
-                    // ->relationship('category', 'name')
                     ->sortable(),
                 TextColumn::make('name')
                     ->searchable(),
@@ -44,7 +44,11 @@ class ProductsTable
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                SelectFilter::make('Category')
+                    ->label('Filter by Category')
+                    ->preload()
+                    ->indicator('Category')
+                    ->relationship('category', 'name'),
             ])
             ->recordActions([
                 ViewAction::make(),
@@ -54,6 +58,6 @@ class ProductsTable
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])->deferFilters(false);
     }
 }
