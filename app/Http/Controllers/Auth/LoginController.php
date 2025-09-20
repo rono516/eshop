@@ -33,7 +33,7 @@ class LoginController extends Controller
        if(Auth::user()->role_as == '1') //1 = Admin Login
        {
            return redirect()->route('filament.superadmin.pages.dashboard')->with('status','Welcome to your dashboard');
-        //    return redirect()->route('dashboard')->with('status','Welcome to your dashboard');
+        //    return redirect()->route('filament.superadmin.pages.dashboard')->with('status','Welcome to your dashboard');
        }
        elseif(Auth::user()->role_as == '0') // Normal or Default User Login
        {

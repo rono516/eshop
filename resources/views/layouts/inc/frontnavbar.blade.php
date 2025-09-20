@@ -36,7 +36,7 @@
 
                     @if (auth()->user()->role_as == '1')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                            <a class="nav-link" href="{{ route('filament.superadmin.pages.dashboard') }}">Dashboard</a>
                         </li>
                     @endif
                     <li class="nav-item">
